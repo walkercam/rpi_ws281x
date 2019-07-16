@@ -73,7 +73,7 @@ const pwm_pin_table_t pwm_pin_chan1[] =
     },
 };
 
-const pwm_pin_tables_t pwm_pin_tables[RPI_PWM_CHANNELS] =
+const pwm_pin_tables_t pwm_pin_tables[2] =
 {
     {
         .pins = pwm_pin_chan0,
@@ -86,9 +86,9 @@ const pwm_pin_tables_t pwm_pin_tables[RPI_PWM_CHANNELS] =
 };
 
 
-int pwm_pin_alt(int chan, int pinnum)
+int pwm_pin_alt(int pinnum)
 {
-    const pwm_pin_tables_t *pintable = &pwm_pin_tables[chan];
+    const pwm_pin_tables_t *pintable = &pwm_pin_tables[0];
     int i;
 
     for (i = 0; i < pintable->count; i++)

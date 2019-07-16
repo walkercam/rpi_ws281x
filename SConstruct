@@ -42,7 +42,7 @@ opts.Add('TOOLCHAIN',
 platforms = [ 
     [
         'userspace',            # Target Name
-        [ 'linux', 'version' ], # Scons tool (linux, avr, etc.)
+        [ 'linux' ], # Scons tool (linux, avr, etc.)
         {                       # Special environment setup
             'CPPPATH' : [
             ],

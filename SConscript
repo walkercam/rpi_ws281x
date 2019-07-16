@@ -37,12 +37,10 @@ lib_srcs = Split('''
     mailbox.c
     ws2811.c
     pwm.c
-    pcm.c
     dma.c
     rpihw.c
 ''')
 
-version_hdr = tools_env.Version('version')
 ws2811_lib = tools_env.Library('libws2811', lib_srcs)
 tools_env['LIBS'].append(ws2811_lib)
 
